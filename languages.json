@@ -1,0 +1,11 @@
+{
+
+ "en": {
+          "langdesc": "English",
+          "educationname": "Education"
+  },
+  "ru": {
+          "langdesc": "Russian",
+          "educationname": "Образование"
+  }
+}
