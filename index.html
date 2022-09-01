@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title> CV Titov Ilya </title>
+<link rel="stylesheet" href="styles.css" type="text/css">
+<script src="popup.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+    <div class="container">
+<header>
+    <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript">
+            var multilang;
+            function onLoad() {
+                multilang = new MultiLang('languages.json', 'nl', this.initList);
+            }
+            function langSelectChange(sel) {
+                multilang.setLanguage(sel.value);
+                refreshLabels();
+            }
+            function initList() {
+                var list = document.getElementsByName("listlanguages")[0];
+                list.options.length = 0;
+                for (var key in multilang.phrases) {
+                    var lang = document.createElement("option");
+                    lang.value = key;
+                    lang.innerHTML = multilang.phrases[key]['langdesc'];
+                    list.appendChild(lang);
+                }
+                refreshLabels();
+            }
+            function refreshLabels() {
+                var allnodes = document.body.getElementsByTagName("*");
+                for (var i=0, max=allnodes.length; i < max; i++) {
+                    var idname = allnodes[i].id;
+                    if (idname != '') {
+                        allnodes[i].textContent = multilang.get(idname);
+                    };
+                };
+            }
+        </script>
+    <body onload="onLoad()">
+        Language: 
+        <select name="listlanguages" id="" onchange="langSelectChange(this)">
+        </select><br/>
+    <div class="info">
+<table cellspacing="15" > 
+    <tr>
+<td><img src='https://i.ibb.co/hY08Ppv/avatar2.jpg' width="200" alt="My photo" class="avatar"></td>
+<td>
+    <h1 id="persname">Titov Ilya</h1>
+<p class="intro" id="intro1">I was born in 24th of February in a city of Tambov</p>
+<p class="intro" id="intro2">IT-enthusiast, JavaScript developer, Crypto-enthusiast,Trader</p>
+<p><strong> Front-end </strong></p>
+<p class="intro"><img src="https://parsmicakish.com/wp-content/uploads/2018/09/location.png" width="20px" height="20px">Moscow, Russia</p>
+</td>
+</tr>
+    </table>
+    <nav>
+    <a href=https://www.instagram.com/ilyatitov_v/?igshid=1nq1k88ykxp9 target=_blank>Instagram</a>
+    | 
+    <a href=https://vk.com/itwoshenka target=_blank>Vkontakte</a>
+    |
+    <a href=https://t.me/itwoshenka target=_blank>Telegram</a>
+    |
+    <a href=https://github.com/itwoshenka target="_blank">Github</a>
+    |
+    <a href=https://twitter.com/itwoshenka target="_blank">Twitter</a>
+    <p>Discord nickname:itwoshenka#5655</p>
+    </nav>
+</div>
+</header>
+<main>
+<hr color="black" size="3" >
+<div class="education">
+<h2 class="educationname" id="educationname">Education</h2>
+<table border='1' class="table">
+    <tr class="namings">
+        <th key="university">University</th>
+        <th key="studyyears">Years os studying</th>
+        <th id="degree">Degree</th>
+        <th id="specialization">Specialization</th>
+    </tr>
+    <tr>
+    <td>MSLU</td>
+    <td>2017-2022</td>
+    <td>Baccalaureate</td>
+    <td>Interpreter</td>
+</tr>
+<tr>
+    <td>RSchool</td>
+    <td>December 2021-Present</td>
+    <td>Stage 0</td>
+    <td>JS/Front-end</td>
+</tr>
+</table>
+</div>
+<hr color="black" size="1" width="300">
+<div class="education">
+    <h2>My skills</h2>
+<ul class="skills">
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>NodeJS</li>
+    <li>Redux</li>
+    <li>WebKit</li>
+    <li>TailWind</li>
+    <li>Git</li>
+    <li>Github</li>
+    <li>CSS3</li>
+    <li>HTML5</li>
+    <li>Figma</li>
+    <li>Chrome Dev Tools</li>
+</ul>
+</div>
+<hr color="black" size="1" width="300">
+<div class="education">
+    <h2>My hobbies</h2>
+    <ul class="hobbies">
+        <li>Crypto,fiat and stock trading</li>
+        <li>DeFi-projects and services</li>
+        <li>NFT</li>
+        <li>MetaVerse</li>
+        <li>Blockchain</li>
+        <li>PoS and PoW cryptocurrencies</li>
+        <li>Play-to-earn nft games and concepts</li>
+        <li>Sport</li>
+        <li>Videogames</li>
+        <li>Cooking</li>
+        <li>Coding</li>
+        <li><a href="https://t.me/boobaligna" target=_blank>Also I run my own tg channel with memes</a></li>
+    </ul>
+    </div>
+    <hr color="black" size="1" width="300">
+    <div class="education">
+<h2>My experience</h2>
+<ul class="experience">
+<li>Customer support agent in <a href="https://0560.ru/company/">Russian Automobile Partnership</a> (2017-2018)</li>
+<li>Freelance developer on <a href="https://www.upwork.com/">upwork</a> (2021-2022)</li>
+<li>Community Manager and Front-end developer at <a href="https://latoken.com/nft/project/chicas">LATOKEN NFT</a> (March 2022-August 2022)</li>
+</ul>
+</div>
+<hr color="black" size="1" width="300">
+<div class="education">
+<h2>Languages</h2>
+<ul class="languages">
+    <li>English,C1</li>
+    <li>Spanish,B1</li>
+    <li>Russian,native speaker</li>
+</ul>
+</div>
+<hr color="black" size="1" width="300">
+</main>
+<footer>
+<div class="contactme">
+<h2>Contact me</h2>
+<form>
+    <label for='name'>Your name</label>
+    <input type='text' id='name' placeholder="Enter your name..." pattern="[A-Za-zА-Яа-яЁё]" max="25" required="">
+    <br>
+    <label for='email'>Your email</label>
+    <input type="email" id='email' placeholder="Enter your email..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" max="30" required="">
+    <br>
+    <label for='message'>Your message</label>
+    <input type="text" id='message' placeholder="Type your message..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" max="100" required="">
+</div>
+    <br>
+    <button class="submitbutton">Contact me</button>
+</form>
+<div class="footer">
+    <p class="name_year">Titov Ilya,2022</p>
+</div>
+</footer>
+<div class="popup-bg">
+<div class="popup">
+    <img src="/images/close.svg" class="close-popup">
+    <span class="popup-text">Thank you for contacting me! I will reach out to you shortly.</span>
+</div>
+</div>
+</div>
+</body>
+</html>

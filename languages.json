@@ -1,0 +1,20 @@
+{
+ "en": {
+          "langdesc": "English",
+          "educationname": "Education",
+          "persname": "Titov Ilya",
+          "intro1": "I was born in 24th of February 2001 in a city of Tambov",
+          "intro2": "IT-enthusiast, JavaScript developer, Deisgner, Crypto-enthusiast, Trader",
+          "alert_banner": "Thank you for contacting me!, I will reach out to you shortly :)",
+          "submitbutton": "Contact me"
+  },
+  "ru": {
+          "langdesc": "Russian",
+          "educationname": "Образование",
+          "persname": "Титов Илья",
+          "intro1": "Я родился 24 февраля 2001 года в городе Тамбов",
+          "intro2": "Увлекаюсь IT, криптой, трейдингом и дизайном, разработчик Javascript",
+          "alert_banner": "Спасибо что ответили мне,скоро я с вами свяжусь :)",
+          "submitbutton": "Связаться со мной"
+  }
+}

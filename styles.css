@@ -1,0 +1,217 @@
+
+.font{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    text-decoration: none;
+}
+a{
+    color: #5a5d61;
+    text-decoration: none;
+}
+a:hover{
+    color: cornflowerblue;
+    text-decoration: underline;
+}
+a:active{
+    color: rgb(10, 0, 150);
+    text-decoration: line-through;
+}
+.avatar{
+ width: 200px;
+ border-radius: 28px;
+ box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+
+}
+.info p{
+    color: rgb(0, 0, 0);
+}
+.education{
+    padding: 15px 5px 15px ;
+    background: wheat;
+    border: 5px whitesmoke;
+    border-style: double;
+    border-radius: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #5a5d61;
+}
+.education h2{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.education li{
+    margin-bottom: 20px;
+}
+.container{
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 28px;
+    border-style: double;
+    border-color: rgb(255, 255, 255);
+}
+.languages li{
+    margin-bottom: 20px;
+    color: #5a5d61;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+ .table{ 
+width: 100%;
+}
+.table td{
+    padding: 5px;
+}
+.namings{
+    color: black;
+}
+.intro{
+    color: black;
+}
+.hobbies li{
+    margin-bottom: 10px;
+}
+.contactme h2{
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contactme input{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: gray solid 1px;
+    background: transparent;
+    color: black;
+    padding: 15px 0 10px;
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.button{
+    width: 100px;
+    height: 40px;
+    border: oldlace solid 2px;
+    border-radius: 15px;
+    background-color: oldlace;
+    margin: auto;
+}
+.footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.github {
+    margin-right: 15px;
+}
+.submitbutton:hover {
+    background-color: snow;
+    cursor: pointer;
+}
+.submitbutton {
+    width: 100px;
+    height: 40px;
+    border: wheat double 2px;
+    border-radius: 15px;
+    background-color: wheat;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.name_year {
+    margin-left: 15px;
+}
+.dropbtn {
+    position: absolute;
+    left: 500px;
+    padding: 5px;
+    cursor: pointer;
+    background-color: wheat;
+}
+.dropdown {
+    position: absolute;
+    left: 500px;
+    display: inline-block;
+    background-color: wheat;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: wheat;
+    width: 140px;
+    left: 500px;
+}
+.dropbtn
+{
+  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
+  padding-left: 25px;
+  width: 45px;
+  position: absolute;
+}
+.dropbtn::after {
+    background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
+    content: "";
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+    width: 12px;
+}
+.dropdown-content a {
+    color: black;
+    padding: 2px 0 2px 25px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: wheat}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#alert_banner{
+    position: absolute;
+    background-color: #5a5d61;
+    text-align: center;
+    top: 50%;
+}
+.popup-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.popup-bg.active{
+    opacity: 1; 
+    pointer-events: all; 
+    transition: 0.5s all;
+}
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+    border-radius: 40px;
+}
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.popup-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+input[id="name"]:not(:placeholder-shown) + .submitbutton{
+    visibility: hidden;
+}
