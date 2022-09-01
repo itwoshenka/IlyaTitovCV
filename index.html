@@ -26,7 +26,7 @@
                 list.options.length = 0;
                 for (var key in multilang.phrases) {
                     var lang = document.createElement("option");
-                    lang.value = key;
+                    lang.value = key;   
                     lang.innerHTML = multilang.phrases[key]['langdesc'];
                     list.appendChild(lang);
                 }
@@ -43,11 +43,13 @@
             }
         </script>
     <body onload="onLoad()">
-        Language: 
-        <select name="listlanguages" id="" onchange="langSelectChange(this)">
-        </select><br/>
+        <span id="language">Language:</span>
+        <select name="listlanguages" onchange="langSelectChange(this)">
+            <option value="en" id="eng">English</option>
+            <option value="ru" id="rus">Russian</option>
+        </select><br>
     <div class="info">
-<table cellspacing="15" > 
+<table cellspacing="15"> 
     <tr>
 <td><img src='https://i.ibb.co/hY08Ppv/avatar2.jpg' width="200" alt="My photo" class="avatar"></td>
 <td>
@@ -55,21 +57,21 @@
 <p class="intro" id="intro1">I was born in 24th of February in a city of Tambov</p>
 <p class="intro" id="intro2">IT-enthusiast, JavaScript developer, Crypto-enthusiast,Trader</p>
 <p><strong> Front-end </strong></p>
-<p class="intro"><img src="https://parsmicakish.com/wp-content/uploads/2018/09/location.png" width="20px" height="20px">Moscow, Russia</p>
+<img src="https://parsmicakish.com/wp-content/uploads/2018/09/location.png" width="20px" height="20px" class="locImg"><p class="intro" id="intro">Tbilisi, Georgia</p>
 </td>
 </tr>
     </table>
     <nav>
-    <a href=https://www.instagram.com/ilyatitov_v/?igshid=1nq1k88ykxp9 target=_blank>Instagram</a>
+    <a href=https://www.instagram.com/ilyatitov_v/?igshid=1nq1k88ykxp9 target=_blank id="inst">Instagram</a>
     | 
-    <a href=https://vk.com/itwoshenka target=_blank>Vkontakte</a>
+    <a href=https://vk.com/itwoshenka target=_blank id="vk">Vkontakte</a>
     |
-    <a href=https://t.me/itwoshenka target=_blank>Telegram</a>
+    <a href=https://t.me/itwoshenka target=_blank id="tg">Telegram</a>
     |
-    <a href=https://github.com/itwoshenka target="_blank">Github</a>
+    <a href=https://github.com/itwoshenka target="_blank" id="gh">Github</a>
     |
-    <a href=https://twitter.com/itwoshenka target="_blank">Twitter</a>
-    <p>Discord nickname:itwoshenka#5655</p>
+    <a href=https://twitter.com/itwoshenka target="_blank" id="tw">Twitter</a>
+    <p id="discord nickname">Discord nickname:itwoshenka#5655</p>
     </nav>
 </div>
 </header>
@@ -79,105 +81,103 @@
 <h2 class="educationname" id="educationname">Education</h2>
 <table border='1' class="table">
     <tr class="namings">
-        <th key="university">University</th>
-        <th key="studyyears">Years os studying</th>
+        <th id="university">University</th>
+        <th id="studyyears">Years os studying</th>
         <th id="degree">Degree</th>
         <th id="specialization">Specialization</th>
-    </tr>
+    </tr>   
     <tr>
-    <td>MSLU</td>
+    <td id="mslu">MSLU</td>
     <td>2017-2022</td>
-    <td>Baccalaureate</td>
-    <td>Interpreter</td>
+    <td id="baccalaureate">Baccalaureate</td>
+    <td id="interpreter">Interpreter</td>
 </tr>
 <tr>
-    <td>RSchool</td>
-    <td>December 2021-Present</td>
-    <td>Stage 0</td>
-    <td>JS/Front-end</td>
+    <td id="rsschool">RSchool</td>
+    <td id="timestamp">December 2021-March 2022</td>
+    <td id="stage">Stage 0</td>
+    <td id="frontend">JS/Front-end</td>
 </tr>
 </table>
 </div>
 <hr color="black" size="1" width="300">
 <div class="education">
-    <h2>My skills</h2>
+    <h2 id="mySkills">My skills</h2>
 <ul class="skills">
-    <li>JavaScript</li>
-    <li>React</li>
-    <li>NodeJS</li>
-    <li>Redux</li>
-    <li>WebKit</li>
-    <li>TailWind</li>
-    <li>Git</li>
-    <li>Github</li>
-    <li>CSS3</li>
-    <li>HTML5</li>
-    <li>Figma</li>
-    <li>Chrome Dev Tools</li>
+    <li id="skill_1">JavaScript</li>
+    <li id="skill_2">React</li>
+    <li id="skill_3">NodeJS</li>
+    <li id="skill_4">Redux</li>
+    <li id="skill_5">WebKit</li>
+    <li id="skill_6">TailWind</li>
+    <li id="skill_7">Git</li>
+    <li id="skill_8">Github</li>
+    <li id="skill_9">CSS3</li>
+    <li id="skill_10">HTML5</li>
+    <li id="skill_11">Figma</li>
+    <li id="skill_12">Chrome Dev Tools</li>
 </ul>
 </div>
 <hr color="black" size="1" width="300">
 <div class="education">
-    <h2>My hobbies</h2>
+    <h2 id="myHobbies">My hobbies</h2>
     <ul class="hobbies">
-        <li>Crypto,fiat and stock trading</li>
-        <li>DeFi-projects and services</li>
-        <li>NFT</li>
-        <li>MetaVerse</li>
-        <li>Blockchain</li>
-        <li>PoS and PoW cryptocurrencies</li>
-        <li>Play-to-earn nft games and concepts</li>
-        <li>Sport</li>
-        <li>Videogames</li>
-        <li>Cooking</li>
-        <li>Coding</li>
-        <li><a href="https://t.me/boobaligna" target=_blank>Also I run my own tg channel with memes</a></li>
+        <li id="hobby_1">Crypto,fiat and stock trading</li>
+        <li id="hobby_2">DeFi-projects and services</li>
+        <li id="hobby_3">NFT</li>
+        <li id="hobby_4">MetaVerse</li>
+        <li id="hobby_5">Blockchain</li>
+        <li id="hobby_6">PoS and PoW cryptocurrencies</li>
+        <li id="hobby_7">Sports</li>
+        <li id="hobby_8">Videogames</li>
+        <li id="hobby_9">Modeling</li>
     </ul>
     </div>
     <hr color="black" size="1" width="300">
     <div class="education">
-<h2>My experience</h2>
+<h2 id="myExp">My experience</h2>
 <ul class="experience">
-<li>Customer support agent in <a href="https://0560.ru/company/">Russian Automobile Partnership</a> (2017-2018)</li>
-<li>Freelance developer on <a href="https://www.upwork.com/">upwork</a> (2021-2022)</li>
-<li>Community Manager and Front-end developer at <a href="https://latoken.com/nft/project/chicas">LATOKEN NFT</a> (March 2022-August 2022)</li>
+<li><span id="job_1.1">Customer support agent in </span><a href="https://0560.ru/company/" id="job_1.2" target="_blank">Russian Automobile Partnership</a> (2017-2018)</li>
+<li><span id="job_2.1">Freelance developer on </span><a href="https://www.upwork.com/" id="job_2.2" target="_blank">upwork</a> (2021-2022)</li>
+<li><span id="job_3.1">Community Manager and Front-end developer at </span><a href="https://latoken.com/nft/project/chicas" id="job_3.2" target="_blank">LATOKEN NFT</a> <span id="job_3.3">(February 2022-August 2022)</span></li>
+<li><span id="job_4.1">SMM Manager and Front-end developer at </span><a href="https://lachain.io/" id="job_4.2">LACHAIN</a><span id="job_4.3" target="_blank">(May 2022-August 2022)</span></li>
 </ul>
 </div>
 <hr color="black" size="1" width="300">
 <div class="education">
-<h2>Languages</h2>
+<h2 id="languages">Languages</h2>
 <ul class="languages">
-    <li>English,C1</li>
-    <li>Spanish,B1</li>
-    <li>Russian,native speaker</li>
+    <li id="english_lang">English,C1</li>
+    <li id="spanish_lang">Spanish,B1</li>
+    <li id="russian_lang">Russian,native speaker</li>
 </ul>
 </div>
 <hr color="black" size="1" width="300">
 </main>
 <footer>
 <div class="contactme">
-<h2>Contact me</h2>
+<h2 id="contact">Contact me</h2>
 <form>
-    <label for='name'>Your name</label>
-    <input type='text' id='name' placeholder="Enter your name..." pattern="[A-Za-zА-Яа-яЁё]" max="25" required="">
+    <label for='name' id="yourName">Your name</label>
+    <input type='text' id="name" placeholder="Enter your name..." pattern="[A-Za-zА-Яа-яЁё]" max="25" required="">
     <br>
-    <label for='email'>Your email</label>
-    <input type="email" id='email' placeholder="Enter your email..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" max="30" required="">
+    <label for='email' id="yourEmail">Your email</label>
+    <input type="email" id="email" placeholder="Enter your email..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" max="30" required="">
     <br>
-    <label for='message'>Your message</label>
-    <input type="text" id='message' placeholder="Type your message..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" max="100" required="">
+    <label for='message' id="yourMsg">Your message</label>
+    <input type="text" id="message" placeholder="Type your message..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" max="100" required="">
 </div>
     <br>
-    <button class="submitbutton">Contact me</button>
+    <button class="submitbutton" id="contactbtn">Contact me</button>
 </form>
 <div class="footer">
-    <p class="name_year">Titov Ilya,2022</p>
+    <p class="name_year" id="nameYear">Titov Ilya,2022</p>
 </div>
 </footer>
 <div class="popup-bg">
 <div class="popup">
     <img src="/images/close.svg" class="close-popup">
-    <span class="popup-text">Thank you for contacting me! I will reach out to you shortly.</span>
+    <span class="popup-text" id="popup_lang">Thank you for contacting me! I will reach out to you shortly.</span>
 </div>
 </div>
 </div>
