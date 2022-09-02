@@ -1,0 +1,30 @@
+{
+  "name": "cv-website",
+  "version": "1.0.0",
+  "description": "this is my own website project to get a job lol",
+  "main": "index.html",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itwoshenka/TitovIlyaCV.git"
+  },
+  "keywords": [
+    "CV",
+    "front-end",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "itwoshenka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itwoshenka/TitovIlyaCV/issues"
+  },
+  "homepage": "https://github.com/itwoshenka/TitovIlyaCV#readme",
+  "dependencies": {
+    "tailwind": "^4.0.0",
+    "webpack": "^5.74.0"
+  }
+}

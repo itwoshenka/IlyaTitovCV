@@ -20,7 +20,12 @@ a:active{
  width: 200px;
  border-radius: 28px;
  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
-
+ filter: grayscale(0);
+ transition: .3s;
+}
+.avatar:hover{
+    filter: brightness(1.1);
+    transform: scale(1.1);
 }
 .info p{
     color: rgb(0, 0, 0);
@@ -33,6 +38,10 @@ a:active{
     border-radius: 30px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #5a5d61;
+    transition: .3s;
+}
+.education:hover{
+    transform: scale(1.05);
 }
 .education h2{
     text-align: center;
@@ -229,7 +238,7 @@ input[id="name"]:not(:placeholder-shown) + button[class="submitbutton"]{
     border-radius: 15px;
 }
 ::selection{
-    color: wheat;
+    color: #8d9299;
 }
 .intro img{
     visibility:visible ;
@@ -237,4 +246,7 @@ input[id="name"]:not(:placeholder-shown) + button[class="submitbutton"]{
 .locIMG{
     position: absolute;
     top: 920px;
+}
+image :hover{
+    scale: 10%;
 }
