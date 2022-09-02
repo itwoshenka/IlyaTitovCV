@@ -73,6 +73,7 @@ width: 100%;
 }
 .contactme h2{
     text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .contactme input{
     width: 100%;
@@ -100,11 +101,13 @@ width: 100%;
 .github {
     margin-right: 15px;
 }
-#submitbutton:hover {
+.submitbutton:hover {
     background-color: snow;
     cursor: pointer;
+    transform: translateY(5px);
+    box-shadow: 0 3px 0 rgb(202, 182, 144);
 }
-#submitbutton {
+.submitbutton {
     width: 100px;
     height: 40px;
     border: wheat double 2px;
@@ -113,11 +116,13 @@ width: 100%;
     margin: auto;
     font-size: 14px;
     cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 0 rgb(202, 182, 144);
 }
 .name_year {
-    margin-right: 15px;
+    margin-left: 15px;
 }
-/* .dropbtn {
+.dropbtn {
     position: absolute;
     left: 500px;
     padding: 5px;
@@ -141,7 +146,7 @@ width: 100%;
 {
   background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
   padding-left: 25px;
-  width: 40px;
+  width: 45px;
   position: absolute;
 }
 .dropbtn::after {
@@ -153,14 +158,6 @@ width: 100%;
     top: 7px;
     width: 12px;
 }
-.dropdown-content a:first-child
-{
-  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
-}
-.dropdown-content a:last-child
-{
-  background: url('https://icons.iconarchive.com/icons/fatcow/farm-fresh/16/flag-usa-icon.png') no-repeat left center;
-}
 .dropdown-content a {
     color: black;
     padding: 2px 0 2px 25px;
@@ -170,4 +167,74 @@ width: 100%;
 .dropdown-content a:hover {background-color: wheat}
 .dropdown:hover .dropdown-content {
     display: block;
-} */
+}
+#alert_banner{
+    position: absolute;
+    background-color: #5a5d61;
+    text-align: center;
+    top: 50%;
+}
+.popup-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.popup-bg.active{
+    opacity: 1; 
+    pointer-events: all; 
+    transition: 0.5s all;
+}
+.popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+    border-radius: 40px;
+}
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.popup-text{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+input[id="name"]:not(:placeholder-shown) + button[class="submitbutton"]{
+    visibility: hidden;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background: wheat;
+    border-radius: 15px;
+}
+::selection{
+    color: wheat;
+}
+.intro img{
+    visibility:visible ;
+}
+.locIMG{
+    position: absolute;
+    top: 920px;
+}
