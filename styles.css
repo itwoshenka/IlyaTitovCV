@@ -210,7 +210,7 @@ width: 100%;
     transition: 0.5s all;
     border-radius: 40px;
 }
-.close-popup {
+.close-popup{
     position: absolute;
     top: 10px;
     right: 10px;
@@ -224,7 +224,7 @@ width: 100%;
     top: 50%;
     left: 50%;
 }
-input[id="name"]:not(:placeholder-shown) + button[class="submitbutton"]{
+input[type="text"]:not(:placeholder-shown) + #submitbutton{
     visibility: hidden;
 }
 ::-webkit-scrollbar{
@@ -238,7 +238,8 @@ input[id="name"]:not(:placeholder-shown) + button[class="submitbutton"]{
     border-radius: 15px;
 }
 ::selection{
-    color: #8d9299;
+    background: black;
+    color: white;
 }
 .intro img{
     visibility:visible ;
@@ -249,4 +250,16 @@ input[id="name"]:not(:placeholder-shown) + button[class="submitbutton"]{
 }
 image :hover{
     scale: 10%;
+}
+option{
+    background: wheat;
+    border-radius: 15px;
+}
+option :hover{
+    background: rgb(183, 166, 135);
+    cursor: pointer;
+    scale: 10%;
+}
+#loc{
+    font-weight: 700;
 }

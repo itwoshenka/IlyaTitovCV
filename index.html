@@ -44,9 +44,9 @@
         </script>
     <body onload="onLoad()">
         <span id="language">Language:</span>
-        <select name="listlanguages" onchange="langSelectChange(this)">
-            <option value="en" id="eng">English</option>
-            <option value="ru" id="rus">Russian</option>
+        <select name="listlanguages" onchange=langSelectChange(this) onclick= >
+            <option value="en" className="op_lang">English</option>
+            <option value="ru" className="op_lang">Russian</option>
         </select><br>
     <div class="info">
 <table cellspacing="15"> 
@@ -55,9 +55,8 @@
 <td>
     <h1 id="persname">Titov Ilya</h1>
 <p class="intro" id="intro1">I was born in 24th of February in a city of Tambov</p>
-<p class="intro" id="intro2">IT-enthusiast, JavaScript developer, Crypto-enthusiast,Trader</p>
-<p><strong> Front-end </strong></p>
-<img src="https://parsmicakish.com/wp-content/uploads/2018/09/location.png" width="20px" height="20px" class="locImg"><p class="intro" id="intro">Tbilisi, Georgia</p>
+<p class="intro" id="intro2">Front-end developer, Crypto-enthusiast, SMM & Community manager</p>
+<p class="intro" id="loc">Tbilisi, Georgia</p>
 </td>
 </tr>
     </table>
@@ -71,6 +70,10 @@
     <a href=https://github.com/itwoshenka target="_blank" id="gh">Github</a>
     |
     <a href=https://twitter.com/itwoshenka target="_blank" id="tw">Twitter</a>
+    |
+    <a href="https://drive.google.com/drive/folders/1ah0aCwSJnyK8aJjacvs9cJq1eMAM_l4K?usp=sharing" target="_blank" id="pt">My portfolio</a>
+    |
+    <a href="https://drive.google.com/drive/folders/1AUz24CgqjHT8_k-vwopc3xhPGbvThA5q?usp=sharing" target="_blank" id="cases">My success cases</a>
     <p id="discord nickname">Discord nickname:itwoshenka#5655</p>
     </nav>
 </div>
@@ -116,6 +119,7 @@
     <li id="skill_10">HTML5</li>
     <li id="skill_11">Figma</li>
     <li id="skill_12">Chrome Dev Tools</li>
+    <li id="skill_13">Unit tests</li>
 </ul>
 </div>
 <hr color="black" size="1" width="300">
@@ -123,14 +127,10 @@
     <h2 id="myHobbies">My hobbies</h2>
     <ul class="hobbies">
         <li id="hobby_1">Crypto,fiat and stock trading</li>
-        <li id="hobby_2">DeFi-projects and services</li>
-        <li id="hobby_3">NFT</li>
-        <li id="hobby_4">MetaVerse</li>
-        <li id="hobby_5">Blockchain</li>
-        <li id="hobby_6">PoS and PoW cryptocurrencies</li>
-        <li id="hobby_7">Sports</li>
-        <li id="hobby_8">Videogames</li>
-        <li id="hobby_9">Modeling</li>
+        <li id="hobby_2">DeFi, Blockchain, NFT, Ethereum</li>
+        <li id="hobby_3">Sports</li>
+        <li id="hobby_4">Videogames</li>
+        <li id="hobby_5">Modeling</li>
     </ul>
     </div>
     <hr color="black" size="1" width="300">
@@ -138,7 +138,6 @@
 <h2 id="myExp">My experience</h2>
 <ul class="experience">
 <li><span id="job_1.1">Customer support agent in </span><a href="https://0560.ru/company/" id="job_1.2" target="_blank">Russian Automobile Partnership</a> (2017-2018)</li>
-<li><span id="job_2.1">Freelance developer on </span><a href="https://www.upwork.com/" id="job_2.2" target="_blank">upwork</a> (2021-2022)</li>
 <li><span id="job_3.1">Community Manager and Front-end developer at </span><a href="https://latoken.com/nft/project/chicas" id="job_3.2" target="_blank">LATOKEN NFT</a> <span id="job_3.3">(February 2022-August 2022)</span></li>
 <li><span id="job_4.1">SMM Manager and Front-end developer at </span><a href="https://lachain.io/" id="job_4.2">LACHAIN</a><span id="job_4.3" target="_blank">(May 2022-August 2022)</span></li>
 </ul>
@@ -159,7 +158,7 @@
 <h2 id="contact">Contact me</h2>
 <form>
     <label for='name' id="yourName">Your name</label>
-    <input type='text' id="name" placeholder="Enter your name..." pattern="[A-Za-zА-Яа-яЁё]" max="25" required="">
+    <input type='text' id="name" placeholder="Enter your name..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required="">
     <br>
     <label for='email' id="yourEmail">Your email</label>
     <input type="email" id="email" placeholder="Enter your email..." pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" max="30" required="">
