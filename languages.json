@@ -3,7 +3,7 @@
           "ru": "English",
           "language": "Language :",
           "langdesc": "English",
-          "educationname": "Education",
+          "educationname": "My education",
           "persname": "Titov Ilya",
           "intro1": "I was born in 24th of February 2001 in a city of Tambov",
           "intro2": "Front-end developer, Crypto-enthusiast, SMM & Community manager",
@@ -58,7 +58,7 @@
           "job_3.3": "(February 2022-August 2022)",
           "job_4.2": "LACHAIN",
           "job_4.3": " (May 2022-August 2022)",
-          "languages": "Languages",
+          "languages": "My languages",
           "english_lang": "English, C1",
           "spanish_lang": "Spanish, B1",
           "russian_lang": "Russian, native speaker",
@@ -73,13 +73,19 @@
           "eng": "English",
           "rus": "Russian",
           "pt": "My portfolio",
-          "cases": "My success cases"
+          "cases": "My success cases",
+          "nav_education": "Education",
+          "nav_skills": "Skills",
+          "nav_hobbies": "Hobbies",
+          "nav_exp": "Experience",
+          "nav_langs": "Languages",
+          "nav_contact": "Contact me"
   },
   "ru": {
           "en": "Английский",
           "language": "Язык :",
           "langdesc": "Russian",
-          "educationname": "Образование",
+          "educationname": "Мое образование",
           "persname": "Титов Илья",
           "intro1": "Я родился 24 февраля 2001 года в городе Тамбов",
           "intro2": "Фронт-енд разработчик/СММ & Коммьюнити менеджер",
@@ -134,7 +140,7 @@
           "job_3.3": "(Февраль 2022-Август 2022)",
           "job_4.2": "ЛАЧЕЙН",
           "job_4.3": " (Май 2022-Август 2022)",
-          "languages": "Языки",
+          "languages": "Языки, которыми я владею",
           "english_lang": "Английский, C1",
           "spanish_lang": "Испанский, B1",
           "russian_lang": "Русский",
@@ -147,6 +153,12 @@
           "popup_lang": "Спасибо, что связались со мной! Очень скоро я отвечу вам.",
           "name": "Введите ваше имя",
           "pt": "Мое портфолио",
-          "cases": "Мой питчдек"
+          "cases": "Мой питчдек",
+          "nav_education": "Образование",
+          "nav_skills": "Навыки",
+          "nav_hobbies": "Хобби",
+          "nav_exp": "Опыт",
+          "nav_langs": "Языки",
+          "nav_contact": "Связь"
   }
 }

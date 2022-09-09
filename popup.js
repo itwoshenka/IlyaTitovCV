@@ -1,12 +1,10 @@
-const popupBg = document.querySelector('.popup-bg');
-const popup = document.querySelector('.popup');
-const openPopupButton = document.querySelector('.submitbutton');
-const closePopupButton = document.querySelector('.close-popup');
-
-function openPopup(){ 
-    openPopupButton.addEventListener('click', (e) => { 
-        e.preventDefault(); 
-        popupBg.classList.add('active'); 
-        popup.classList.add('active'); 
-    })
-};
+const popupBtns = document.querySelectorAll('.submitbutton');
+const popupBg = document.getElementById('')
+const popupWindow = document.getElementById('')
+function popupAppear(){
+        popupBtns.addEventListener("click", function (e){
+            e.preventDefault();
+            alert("JAVASCRIIIPT!");
+        })
+    }
+console.log(popupBtns)
