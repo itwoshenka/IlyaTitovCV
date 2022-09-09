@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 .font{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
@@ -30,7 +32,7 @@ a:active{
 .info p{
     color: rgb(0, 0, 0);
 }
-.education{
+.badge{
     padding: 15px 5px 15px ;
     background: wheat;
     border: 5px whitesmoke;
@@ -40,14 +42,14 @@ a:active{
     color: #5a5d61;
     transition: .3s;
 }
-.education:hover{
+.badge:hover{
     transform: scale(1.05);
 }
-.education h2{
+.badge h2{
     text-align: center;
     color: rgb(0, 0, 0);
 }
-.education li{
+.badge li{
     margin-bottom: 20px;
 }
 .container{
@@ -59,6 +61,7 @@ a:active{
     border-radius: 28px;
     border-style: double;
     border-color: rgb(255, 255, 255);
+    position: relative;
 }
 .languages li{
     margin-bottom: 20px;
@@ -131,99 +134,6 @@ width: 100%;
 .name_year {
     margin-left: 15px;
 }
-.dropbtn {
-    position: absolute;
-    left: 500px;
-    padding: 5px;
-    cursor: pointer;
-    background-color: wheat;
-}
-.dropdown {
-    position: absolute;
-    left: 500px;
-    display: inline-block;
-    background-color: wheat;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: wheat;
-    width: 140px;
-    left: 500px;
-}
-.dropbtn
-{
-  background: url('http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png') no-repeat left center;
-  padding-left: 25px;
-  width: 45px;
-  position: absolute;
-}
-.dropbtn::after {
-    background: rgba(0, 0, 0, 0) url("https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-16.png") no-repeat scroll center center;
-    content: "";
-    height: 16px;
-    position: absolute;
-    right: 0;
-    top: 7px;
-    width: 12px;
-}
-.dropdown-content a {
-    color: black;
-    padding: 2px 0 2px 25px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content a:hover {background-color: wheat}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-#alert_banner{
-    position: absolute;
-    background-color: #5a5d61;
-    text-align: center;
-    top: 50%;
-}
-.popup-bg{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.5s all;
-}
-.popup-bg.active{
-    opacity: 1; 
-    pointer-events: all; 
-    transition: 0.5s all;
-}
-.popup{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background: #fff;
-    width: 400px;
-    padding: 25px;
-    transition: 0.5s all;
-    border-radius: 40px;
-}
-.close-popup{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-.popup-text{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: black;
-    text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-}
 input[type="text"]:not(:placeholder-shown) + #submitbutton{
     visibility: hidden;
 }
@@ -251,15 +161,108 @@ input[type="text"]:not(:placeholder-shown) + #submitbutton{
 image :hover{
     scale: 10%;
 }
-option{
-    background: wheat;
-    border-radius: 15px;
-}
-option :hover{
-    background: rgb(183, 166, 135);
-    cursor: pointer;
-    scale: 10%;
-}
 #loc{
     font-weight: 700;
+}
+input[type="name"] + input [type="email"]:placeholder-shown + button{
+    opacity: 0;
+    pointer-events: none;
+}
+.popup{
+    background:#e1e1e1; 
+    visibility: hidden;
+    display: none;
+    top:100px; 
+    left:50%; 
+    width: 500px;
+    position:absolute; 
+    z-index:41;
+    padding:30px; 
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+.popup:active{
+    background:#e1e1e1; 
+    top:100px; 
+    left:50%; 
+    width: 500px;
+    position:absolute; 
+    z-index:41;
+    padding:30px; 
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
+    box-shadow:0 0 10px rgba(0,0,0,0.4);
+}
+.popup_bg{
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: calc(100%);
+    visibility: hidden;
+    display: none;
+}
+.popup_bg:active{
+    background: black;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    height: calc(100%);
+}
+header{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    background-color: wheat;
+    width: 100%;
+    display: flex;
+    z-index: 100;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    height: 50px;
+    border-radius: 0 0 30px 30px;
+}
+.header_nav{
+    position: absolute;
+    left: 15px;
+    display: flex;
+}
+.header_nav_btn{
+    display: flex;
+    flex-direction: row;
+    width: 75px;
+    height: 25px;
+    border: wheat double 2px;
+    border-radius: 15px;
+    background-color: snow;
+    margin-top: 6px;
+    margin-left: 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 0 rgb(202, 182, 144);
+}
+.select{
+    display: flex;
+    right: 0px;
+    margin: 15px;
+    position: absolute;
+}
+.header_nav_text{
+    margin: auto;
+    text-decoration: none;
+    color: black;
+}
+.header_nav_text:hover{
+    text-decoration: none;
+    color: none;
+}
+.header_nav_btn:hover{
+    background-color: snow;
+    cursor: pointer;
+    transform: translateY(5px);
+    box-shadow: 0 3px 0 rgb(202, 182, 144);
+    text-decoration: none;
+    color: black;
 }
