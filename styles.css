@@ -19,11 +19,11 @@ a:active{
     text-decoration: line-through;
 }
 .avatar{
- width: 200px;
- border-radius: 28px;
- box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
- filter: grayscale(0);
- transition: .3s;
+    width: 200px;
+    border-radius: 28px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+    filter: grayscale(0);
+    transition: .3s;
 }
 .avatar:hover{
     filter: brightness(1.1);
@@ -169,46 +169,47 @@ input[type="name"] + input [type="email"]:placeholder-shown + button{
     pointer-events: none;
 }
 .popup{
-    background:#e1e1e1; 
-    visibility: hidden;
-    display: none;
-    top:100px; 
-    left:50%; 
-    width: 500px;
-    position:absolute; 
-    z-index:41;
-    padding:30px; 
+    background:white; 
+    opacity: 0;
+    pointer-events: none;
+    width: 450px;
+    height: 100px;
+    position: fixed; 
+    z-index: 1;
     -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
     -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
     box-shadow:0 0 10px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.popup:active{
-    background:#e1e1e1; 
-    top:100px; 
-    left:50%; 
-    width: 500px;
-    position:absolute; 
-    z-index:41;
-    padding:30px; 
-    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
-    -moz-box-shadow:0 0 10px rgba(0,0,0,0.4); 
-    box-shadow:0 0 10px rgba(0,0,0,0.4);
+.popup.active{
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+    border-radius: 15px;
 }
 .popup_bg{
-    background: black;
-    opacity: 0.5;
-    position: absolute;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    left: 0px;
     width: 100%;
-    height: calc(100%);
-    visibility: hidden;
-    display: none;
+    height: 100vh;
+    pointer-events: none;
+    transition: 0.5s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.popup_bg:active{
-    background: black;
-    opacity: 0.5;
-    position: absolute;
-    width: 100%;
-    height: calc(100%);
+.popup_bg.active{
+    pointer-events: all;
+    opacity: 1;
+    transition: 0.5s all;
+    pointer-events: all;
+    z-index: 2;
 }
 header{
     position: fixed;
@@ -217,7 +218,7 @@ header{
     background-color: wheat;
     width: 100%;
     display: flex;
-    z-index: 100;
+    z-index: 1;
     -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     height: 50px;
@@ -265,4 +266,25 @@ header{
     box-shadow: 0 3px 0 rgb(202, 182, 144);
     text-decoration: none;
     color: black;
+}
+.okbutton{
+    width: 70px;
+    height: 30px;
+    border: wheat double 2px;
+    border-radius: 15px;
+    background-color: wheat;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 6px 0 rgb(202, 182, 144);
+}
+.okbutton:hover {
+    background-color: snow;
+    cursor: pointer;
+    transform: translateY(5px);
+    box-shadow: 0 3px 0 rgb(202, 182, 144);
+}
+.popup_text{
+    margin-top: 15px;
 }
