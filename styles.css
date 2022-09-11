@@ -134,7 +134,7 @@ width: 100%;
 .name_year {
     margin-left: 15px;
 }
-input[type="text"]:not(:placeholder-shown) + #submitbutton{
+input:placeholder-shown + .submitbutton{
     visibility: hidden;
 }
 ::-webkit-scrollbar{
