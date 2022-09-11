@@ -10,8 +10,6 @@
 <body>
     <div class="container">
 <header class="header">
-    <script src="popup.js"></script>
-    <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript">
             var multilang;
             function onLoad() {
@@ -49,12 +47,12 @@
         </select>
         </div>
         <nav class="header_nav">
-            <a class="header_nav_btn" href="#"><span class="header_nav_text" id="nav_education">Education</span></a>
-            <a class="header_nav_btn" href="#"><span class="header_nav_text" id="nav_skills">Skills</span></a>
-            <a class="header_nav_btn" href="#"><span class="header_nav_text" id="nav_hobbies">Hobbies</span></a>
-            <a class="header_nav_btn" href="#"><span class="header_nav_text" id="nav_exp">Experience</span></a>
-            <a class="header_nav_btn" href="#"><span class="header_nav_text" id="nav_langs">Languages</span></a>
-            <a class="header_nav_btn" href="#"><span class="header_nav_text" id="nav_contact">Contact me</span></a>
+            <a class="header_nav_btn" href="#badge_1" onclick="scroll()"><span class="header_nav_text" id="nav_education">Education</span></a>
+            <a class="header_nav_btn" href="#badge_2"><span class="header_nav_text" id="nav_skills">Skills</span></a>
+            <a class="header_nav_btn" href="#badge_3"><span class="header_nav_text" id="nav_hobbies">Hobbies</span></a>
+            <a class="header_nav_btn" href="#badge_4"><span class="header_nav_text" id="nav_exp">Experience</span></a>
+            <a class="header_nav_btn" href="#badge_5"><span class="header_nav_text" id="nav_langs">Languages</span></a>
+            <a class="header_nav_btn" href="#contactme"><span class="header_nav_text" id="nav_contact">Contact me</span></a>
         </nav>
     </header>
     <div class="info">
@@ -89,7 +87,7 @@
 </header>
 <main>
 <hr color="black" size="3" >
-<div class="badge">
+<div class="badge" name="badge_1">
 <h2 class="educationname" id="educationname">Education</h2>
 <table border='1' class="table">
     <tr class="namings">
@@ -184,10 +182,14 @@
 </footer>
 </div>
 <div class="popup_bg"> 
-    <div class="popup" >
-        <img src="images/close.svg" class="close_popup">
-        <span class="popup_text">Thank you for contacting me! I will reach out to you shortly!</span>
+    <div class="popup">
+        <span class="popup_text" id="popup_lang">Thank you for contacting me! I will reach out to you shortly!</span>
+        <button class="okbutton">OK</button>
     </div>
 </div>  
+<script src="popup.js"></script>
+<script src="scroll.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
