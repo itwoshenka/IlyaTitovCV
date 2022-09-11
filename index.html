@@ -43,7 +43,7 @@
     <body onload="onLoad()">
         <div class="select">
         <span id="language">Language:</span>
-        <select name="listlanguages" onchange=langSelectChange(this)>
+        <select name="listlanguages" onchange=langSelectChange(this) className="selection">
         </select>
         </div>
         <nav class="header_nav">
@@ -165,7 +165,7 @@
 <h2 id="contact">Contact me</h2>
 <form>
     <label for='name' id="yourName">Your name</label>
-    <input type="name" id="name" placeholder="Enter your name..." required="">
+    <input type="name" name="name" id="name" placeholder="Enter your name..." required="">
     <br>
     <label for='email' id="yourEmail">Your email</label>
     <input type="email" id="email" placeholder="Enter your email..." required="">
@@ -187,9 +187,10 @@
         <button class="okbutton">OK</button>
     </div>
 </div>  
-<script src="popup.js"></script>
-<script src="scroll.js"></script>
+<script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="scroll.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="placeholders.js"></script>
 </body>
 </html>

@@ -79,7 +79,8 @@
           "nav_hobbies": "Hobbies",
           "nav_exp": "Experience",
           "nav_langs": "Languages",
-          "nav_contact": "Contact me"
+          "nav_contact": "Contact me",
+          "ph1": "Введите свое имя..."
   },
   "ru": {
           "en": "Английский",
@@ -159,6 +160,7 @@
           "nav_hobbies": "Хобби",
           "nav_exp": "Опыт",
           "nav_langs": "Языки",
-          "nav_contact": "Связь"
+          "nav_contact": "Связь",
+          "ph1": "Введите свое имя..."
   }
 }
