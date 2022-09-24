@@ -63,12 +63,12 @@
           "spanish_lang": "Spanish, B1",
           "russian_lang": "Russian, native speaker",
           "contact": "Contact me",
-          "yourName": "Your name",
-          "yourEmail": "Your email",
-          "yourMsg": "Your message",
+          "yourName": "Your name:",
+          "yourEmail": "Your email:",
+          "yourMsg": "Your message:",
           "contactbtn": "Send",
           "nameYear": "Titov Ilya, 2022",
-          "popup_lang": "Thank you for contacting me! I will reach out to you shortly.",
+          "popup_lang": "Thank you for contacting me    ! I will reach out to you shortly.",
           "name": "Enter your name...",
           "eng": "English",
           "rus": "Russian",
@@ -80,7 +80,7 @@
           "nav_exp": "Experience",
           "nav_langs": "Languages",
           "nav_contact": "Contact me",
-          "ph1": "Введите свое имя..."
+          "wrongData":"Please enter your contact information before sending it :)"
   },
   "ru": {
           "en": "Английский",
@@ -146,9 +146,9 @@
           "spanish_lang": "Испанский, B1",
           "russian_lang": "Русский",
           "contact": "Связаться со мной",
-          "yourName": "Ваше имя",
-          "yourEmail": "Ваш емейл",
-          "yourMsg": "Ваше сообщение",
+          "yourName": "Ваше имя:",
+          "yourEmail": "Ваш емейл:",
+          "yourMsg": "Ваше сообщение:",
           "contactbtn": "Отправить",
           "nameYear": "Титов Илья, 2022",
           "popup_lang": "Спасибо, что связались со мной! Очень скоро я отвечу вам.",
@@ -161,6 +161,6 @@
           "nav_exp": "Опыт",
           "nav_langs": "Языки",
           "nav_contact": "Связь",
-          "ph1": "Введите свое имя..."
+          "wrongData":"Пожалуйста введите свои данные перед отправкой :)"
   }
 }

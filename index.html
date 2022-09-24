@@ -10,40 +10,10 @@
 <body>
     <div class="container">
 <header class="header">
-        <script type="text/javascript">
-            var multilang;
-            function onLoad() {
-                multilang = new MultiLang('languages.json', 'nl', this.initList);
-            }
-            function langSelectChange(sel) {
-                multilang.setLanguage(sel.value);
-                refreshLabels();
-            }
-            function initList() {
-                var list = document.getElementsByName("listlanguages")[0];
-                list.options.length = 0;
-                for (var key in multilang.phrases) {
-                    var lang = document.createElement("option");
-                    lang.value = key;   
-                    lang.innerHTML = multilang.phrases[key]['langdesc'];
-                    list.appendChild(lang);
-                }
-                refreshLabels();
-            }
-            function refreshLabels() {
-                var allnodes = document.body.getElementsByTagName("*");
-                for (var i=0, max=allnodes.length; i < max; i++) {
-                    var idname = allnodes[i].id;
-                    if (idname != '') {
-                        allnodes[i].textContent = multilang.get(idname);
-                    };
-                };
-            }
-        </script>
     <body onload="onLoad()">
         <div class="select">
         <span id="language">Language:</span>
-        <select name="listlanguages" onchange=langSelectChange(this) className="selection">
+        <select name="listlanguages" onchange=langSelectChange(this) class="selection">
         </select>
         </div>
         <nav class="header_nav">
@@ -164,17 +134,17 @@
 <div class="contactme">
 <h2 id="contact">Contact me</h2>
 <form>
-    <label for='name' id="yourName">Your name</label>
-    <input type="name" name="name" id="name" placeholder="Enter your name..." required="">
+    <label for='name' id="yourName">Your name:</label>
+    <input type="name" name="name" id="name" placeholder="Enter your name..." required min="2" class="input">
     <br>
-    <label for='email' id="yourEmail">Your email</label>
-    <input type="email" id="email" placeholder="Enter your email..." required="">
+    <label for='email' id="yourEmail">Your email:</label>
+    <input type="email" id="email" placeholder="Enter your email..." required min="5" class="input">
     <br>
-    <label for='message' id="yourMsg">Your message</label>
-    <input type="text" id="message" placeholder="Type your message...">
+    <label for='message' id="yourMsg">Your message:</label>
+<input type="text" id="message" placeholder="Type your message..." class="input">
 </div>
     <br>
-    <button class="submitbutton" id="contactbtn" className="contactMe">Contact me</button>
+    <button class="submitbutton" id="contactbtn" className="contactMe" onclick="validate()">Contact me</button>
 </form>
 <div class="footer">
     <p class="name_year" id="nameYear">Titov Ilya,2022</p>
@@ -183,14 +153,45 @@
 </div>
 <div class="popup_bg"> 
     <div class="popup">
-        <span class="popup_text" id="popup_lang">Thank you for contacting me! I will reach out to you shortly!</span>
+        <span class="userName">${userNaming}</span>
+        <span class="popup_text" id="popup_lang">thank you for contacting me! I will reach out to you shortly!</span>
         <button class="okbutton">OK</button>
     </div>
-</div>  
+</div>
 <script type="text/javascript" src="popup.js"></script>
 <script type="text/javascript" src="scroll.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
 <script type="text/javascript" src="placeholders.js"></script>
+<script type="text/javascript">
+    var multilang;
+    function onLoad() {
+        multilang = new MultiLang('languages.json', 'nl', this.initList);
+    }
+    function langSelectChange(sel) {
+        multilang.setLanguage(sel.value);
+        refreshLabels();
+    }
+    function initList() {
+        var list = document.getElementsByName("listlanguages")[0];
+        list.options.length = 0;
+        for (var key in multilang.phrases) {
+            var lang = document.createElement("option");
+            lang.value = key;   
+            lang.innerHTML = multilang.phrases[key]['langdesc'];
+            list.appendChild(lang);
+        }
+        refreshLabels();
+    }
+    function refreshLabels() {
+        var allnodes = document.body.getElementsByTagName("*");
+        for (var i=0, max=allnodes.length; i < max; i++) {
+            var idname = allnodes[i].id;
+            if (idname != '') {
+                allnodes[i].textContent = multilang.get(idname);
+            };
+        };
+    }
+</script>
 </body>
 </html>

@@ -173,7 +173,7 @@ input[type="name"] + input [type="email"]:placeholder-shown + button{
     opacity: 0;
     pointer-events: none;
     width: 450px;
-    height: 100px;
+    height: 150px;
     position: fixed; 
     z-index: 1;
     -webkit-box-shadow:0 0 10px rgba(0,0,0,0.4);
@@ -189,6 +189,7 @@ input[type="name"] + input [type="email"]:placeholder-shown + button{
     pointer-events: all;
     transition: 0.5s all;
     border-radius: 15px;
+    display: flex;
 }
 .popup_bg{
     background: rgba(0,0,0,0.5);
@@ -210,6 +211,7 @@ input[type="name"] + input [type="email"]:placeholder-shown + button{
     transition: 0.5s all;
     pointer-events: all;
     z-index: 2;
+    display: flex;
 }
 header{
     position: fixed;
@@ -296,4 +298,21 @@ header{
 }
 .popup_text{
     margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+}
+.userName{
+    padding-top: 10px;
+    display: inline-flex;
+}
+.name:invalid + .submitbutton{
+    opacity: 0; 
+    visibility: none;
+}
+.popup_text.active{
+    visibility: none;
+}
+.input.error{
+    border: red 2px;
+    
 }
