@@ -4,7 +4,8 @@
   "description": "this is my own website project to get a job lol",
   "main": "index.html",
   "scripts": {
-    "test": "node"
+    "test": "node",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build"
   },
   "repository": {
     "type": "git",
