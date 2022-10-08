@@ -10,10 +10,10 @@
 <body>
     <div class="container">
 <header class="header">
-    <body onload="onLoad()">
+    <body onload="onLoad();" >
         <div class="select">
         <span id="language">Language:</span>
-        <select name="listlanguages" onchange=langSelectChange(this) class="selection">
+        <select name="listlanguages" onchange='langSelectChange(this);changeLanguage(langSelect)' class="selection">
         </select>
         </div>
         <nav class="header_nav">
@@ -51,6 +51,8 @@
     <a href="https://drive.google.com/drive/folders/1ah0aCwSJnyK8aJjacvs9cJq1eMAM_l4K?usp=sharing" target="_blank" id="pt">My portfolio</a>
     |
     <a href="https://drive.google.com/drive/folders/1AUz24CgqjHT8_k-vwopc3xhPGbvThA5q?usp=sharing" target="_blank" id="cases">My success cases</a>
+    |
+    <a href="https://www.codewars.com/users/itwoshenka" target="_blank" id="cw">CodeWars</a>
     <p id="discord nickname">Discord nickname:itwoshenka#5655</p>
     </nav>
 </div>
@@ -97,6 +99,8 @@
     <li id="skill_11">Figma</li>
     <li id="skill_12">Chrome Dev Tools</li>
     <li id="skill_13">Unit tests</li>
+    <li id="skill_14">SMTP</li>
+    <li id="skill_15">API</li>
 </ul>
 </div>
 <hr color="black" size="1" width="300">
@@ -133,18 +137,20 @@
 <footer>
 <div class="contactme">
 <h2 id="contact">Contact me</h2>
-<form>
+<form class="contact_form">
     <label for='name' id="yourName">Your name:</label>
-    <input type="name" name="name" id="name" placeholder="Enter your name..." required min="2" class="input">
+    <input type="name" id="name" placeholder="Enter your name..." class="input"/>
     <br>
     <label for='email' id="yourEmail">Your email:</label>
-    <input type="email" id="email" placeholder="Enter your email..." required min="5" class="input">
+    <input type="email" id="email" placeholder="Enter your email..." class="input"/>
     <br>
     <label for='message' id="yourMsg">Your message:</label>
-<input type="text" id="message" placeholder="Type your message..." class="input">
+<input type="text" id="message" placeholder="Type your message..." class="input"/>
 </div>
     <br>
-    <button class="submitbutton" id="contactbtn" className="contactMe" onclick="validate()">Contact me</button>
+    <label for="submit">
+    <button type='submit' class="submitbutton" id="contactbtn" className="contactMe" onclick="PopupGo();sendEmail();return false">Contact me</button>
+    </label>
 </form>
 <div class="footer">
     <p class="name_year" id="nameYear">Titov Ilya,2022</p>
@@ -153,12 +159,12 @@
 </div>
 <div class="popup_bg"> 
     <div class="popup">
-        <span class="userName">${userNaming}</span>
+        <span class="userName">Fill in the name field please :) but anyway</span>
         <span class="popup_text" id="popup_lang">thank you for contacting me! I will reach out to you shortly!</span>
-        <button class="okbutton">OK</button>
+        <button class="okbutton" onclick="inputName.value=''; inputEmail.value=''; inputMsg.value='';">OK</button>
     </div>
 </div>
-<script type="text/javascript" src="popup.js"></script>
+<script src="popup.js"></script>
 <script type="text/javascript" src="scroll.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 <script type="text/javascript" src="index.js"></script>
@@ -192,6 +198,28 @@
             };
         };
     }
+</script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    document.getElementById('name').addEventListener('input', function saveInfoName() {
+        localStorage.setItem('sendName',document.getElementById('name').value);
+    });
+    document.getElementById('email').addEventListener('input', ()=>{
+        localStorage.setItem('sendMail',document.getElementById('email').value);
+    });
+    document.getElementById('message').addEventListener('input', ()=>{
+        localStorage.setItem('sendMsg',document.getElementById('message').value);
+    });
+    function sendEmail(){}
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "rufterhufter@gmail.com",
+        Password : "BCBC8636F423F372EFD8EFF56190BCD1FE9E",
+        To : 'itwoshenka@gmail.com',
+        From : "rufterhufter@gmail.com",
+        Subject : "New contact application!",
+        Body : "Hello, you got 1 new application from " + localStorage.getItem('sendName') + " and this mail "+ localStorage.getItem('sendMail') + " and his message is " + localStorage.getItem('sendMsg')
+    });
 </script>
 </body>
 </html>

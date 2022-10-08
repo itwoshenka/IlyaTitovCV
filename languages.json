@@ -80,7 +80,10 @@
           "nav_exp": "Experience",
           "nav_langs": "Languages",
           "nav_contact": "Contact me",
-          "wrongData":"Please enter your contact information before sending it :)"
+          "wrongData":"Please enter your contact information before sending it :)",
+          "cw":"CodeWars",
+          "skill_14": "SMTP",
+          "skill_15": "API"
   },
   "ru": {
           "en": "Английский",
@@ -161,6 +164,9 @@
           "nav_exp": "Опыт",
           "nav_langs": "Языки",
           "nav_contact": "Связь",
-          "wrongData":"Пожалуйста введите свои данные перед отправкой :)"
+          "wrongData":"Пожалуйста введите свои данные перед отправкой :)",
+          "cw":"Кодовые войны",
+          "skill_14": "SMTP",
+          "skill_15": "API"
   }
 }

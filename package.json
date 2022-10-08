@@ -24,6 +24,10 @@
   },
   "homepage": "https://github.com/itwoshenka/TitovIlyaCV#readme",
   "dependencies": {
+    "express": "^4.18.1",
+    "express-validator": "^6.14.2",
+    "mustache-express": "^1.3.2",
+    "nodemailer": "^6.7.8",
     "tailwind": "^4.0.0",
     "webpack": "^5.74.0"
   }
