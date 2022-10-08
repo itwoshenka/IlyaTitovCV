@@ -134,9 +134,6 @@ width: 100%;
 .name_year {
     margin-left: 15px;
 }
-input:placeholder-shown + .submitbutton{
-    visibility: hidden;
-}
 ::-webkit-scrollbar{
     width: 10px;
 }
@@ -163,10 +160,6 @@ image :hover{
 }
 #loc{
     font-weight: 700;
-}
-input[type="name"] + input [type="email"]:placeholder-shown + button{
-    opacity: 0;
-    pointer-events: none;
 }
 .popup{
     background:white; 
@@ -305,14 +298,6 @@ header{
     padding-top: 10px;
     display: inline-flex;
 }
-.name:invalid + .submitbutton{
-    opacity: 0; 
-    visibility: none;
-}
 .popup_text.active{
     visibility: none;
-}
-.input.error{
-    border: red 2px;
-    
 }
