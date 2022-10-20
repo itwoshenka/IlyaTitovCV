@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "node",
-    "build": "GENERATE_SOURCEMAP=false react-scripts build"
+    "build": "GENERATE_SOURCEMAP=false scripts build"
   },
   "repository": {
     "type": "git",
